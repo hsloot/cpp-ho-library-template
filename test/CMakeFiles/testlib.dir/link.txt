@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/testlib.dir/tests-main.cpp.o CMakeFiles/testlib.dir/tests-helloworld.cpp.o  -o testlib 
