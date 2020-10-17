@@ -29,6 +29,10 @@
 /home/runner/work/cpp-ho-library-template/build/CMakeFiles/ExperimentalSubmit.dir
 /home/runner/work/cpp-ho-library-template/build/CMakeFiles/ContinuousStart.dir
 /home/runner/work/cpp-ho-library-template/build/CMakeFiles/ContinuousUpdate.dir
+/home/runner/work/cpp-ho-library-template/build/docs/CMakeFiles/rebuild_cache.dir
+/home/runner/work/cpp-ho-library-template/build/docs/CMakeFiles/edit_cache.dir
+/home/runner/work/cpp-ho-library-template/build/docs/CMakeFiles/test.dir
+/home/runner/work/cpp-ho-library-template/build/docs/CMakeFiles/docs.dir
 /home/runner/work/cpp-ho-library-template/build/test/CMakeFiles/edit_cache.dir
 /home/runner/work/cpp-ho-library-template/build/test/CMakeFiles/test.dir
 /home/runner/work/cpp-ho-library-template/build/test/CMakeFiles/rebuild_cache.dir

@@ -503,6 +503,19 @@ ContinuousUpdate/fast:
 .PHONY : ContinuousUpdate/fast
 
 #=============================================================================
+# Target rules for targets named docs
+
+# Build rule for target.
+docs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 docs
+.PHONY : docs
+
+# fast build rule for target.
+docs/fast:
+	$(MAKE) -f docs/CMakeFiles/docs.dir/build.make docs/CMakeFiles/docs.dir/build
+.PHONY : docs/fast
+
+#=============================================================================
 # Target rules for targets named testlib
 
 # Build rule for target.
@@ -552,6 +565,7 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... docs"
 	@echo "... testlib"
 .PHONY : help
 

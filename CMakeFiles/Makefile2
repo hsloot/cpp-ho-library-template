@@ -70,11 +70,13 @@ CMAKE_BINARY_DIR = /home/runner/work/cpp-ho-library-template/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: docs/all
 all: test/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
+preinstall: docs/preinstall
 preinstall: test/preinstall
 
 .PHONY : preinstall
@@ -108,6 +110,7 @@ clean: CMakeFiles/NightlySubmit.dir/clean
 clean: CMakeFiles/ExperimentalSubmit.dir/clean
 clean: CMakeFiles/ContinuousStart.dir/clean
 clean: CMakeFiles/ContinuousUpdate.dir/clean
+clean: docs/clean
 clean: test/clean
 
 .PHONY : clean
@@ -129,6 +132,24 @@ _deps/catch-build/preinstall:
 _deps/catch-build/clean:
 
 .PHONY : _deps/catch-build/clean
+
+#=============================================================================
+# Directory level rules for directory docs
+
+# Recursive "all" directory target.
+docs/all:
+
+.PHONY : docs/all
+
+# Recursive "preinstall" directory target.
+docs/preinstall:
+
+.PHONY : docs/preinstall
+
+# Recursive "clean" directory target.
+docs/clean: docs/CMakeFiles/docs.dir/clean
+	$(CMAKE_COMMAND) -P docs/CMakeFiles/cmake_directory_clean.cmake
+.PHONY : docs/clean
 
 #=============================================================================
 # Directory level rules for directory test
@@ -907,13 +928,40 @@ CMakeFiles/ContinuousUpdate.dir/clean:
 .PHONY : CMakeFiles/ContinuousUpdate.dir/clean
 
 #=============================================================================
+# Target rules for target docs/CMakeFiles/docs.dir
+
+# All Build rule for target.
+docs/CMakeFiles/docs.dir/all:
+	$(MAKE) -f docs/CMakeFiles/docs.dir/build.make docs/CMakeFiles/docs.dir/depend
+	$(MAKE) -f docs/CMakeFiles/docs.dir/build.make docs/CMakeFiles/docs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/runner/work/cpp-ho-library-template/build/CMakeFiles --progress-num=1 "Built target docs"
+.PHONY : docs/CMakeFiles/docs.dir/all
+
+# Build rule for subdir invocation for target.
+docs/CMakeFiles/docs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/cpp-ho-library-template/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 docs/CMakeFiles/docs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/cpp-ho-library-template/build/CMakeFiles 0
+.PHONY : docs/CMakeFiles/docs.dir/rule
+
+# Convenience name for target.
+docs: docs/CMakeFiles/docs.dir/rule
+
+.PHONY : docs
+
+# clean rule for target.
+docs/CMakeFiles/docs.dir/clean:
+	$(MAKE) -f docs/CMakeFiles/docs.dir/build.make docs/CMakeFiles/docs.dir/clean
+.PHONY : docs/CMakeFiles/docs.dir/clean
+
+#=============================================================================
 # Target rules for target test/CMakeFiles/testlib.dir
 
 # All Build rule for target.
 test/CMakeFiles/testlib.dir/all:
 	$(MAKE) -f test/CMakeFiles/testlib.dir/build.make test/CMakeFiles/testlib.dir/depend
 	$(MAKE) -f test/CMakeFiles/testlib.dir/build.make test/CMakeFiles/testlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/runner/work/cpp-ho-library-template/build/CMakeFiles --progress-num=1,2,3 "Built target testlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/runner/work/cpp-ho-library-template/build/CMakeFiles --progress-num=2,3,4 "Built target testlib"
 .PHONY : test/CMakeFiles/testlib.dir/all
 
 # Build rule for subdir invocation for target.

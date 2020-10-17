@@ -7,10 +7,14 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "CMakeDoxyfile.in"
+  "CMakeDoxygenDefaults.cmake"
   "CMakeFiles/3.17.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.0/CMakeSystem.cmake"
   "_deps/catch-src/CMakeLists.txt"
   "/home/runner/work/cpp-ho-library-template/cpp-ho-library-template/CMakeLists.txt"
+  "/home/runner/work/cpp-ho-library-template/cpp-ho-library-template/docs/CMakeLists.txt"
+  "/home/runner/work/cpp-ho-library-template/cpp-ho-library-template/docs/Doxyfile.in"
   "/home/runner/work/cpp-ho-library-template/cpp-ho-library-template/test/CMakeLists.txt"
   "/usr/local/share/cmake-3.17/Modules/CMakeCXXCompiler.cmake.in"
   "/usr/local/share/cmake-3.17/Modules/CMakeCXXCompilerABI.cpp"
@@ -105,6 +109,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.17.0/CMakeCXXCompiler.cmake"
   "DartConfiguration.tcl"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "docs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/catch-build/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -139,5 +144,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/ExperimentalSubmit.dir/DependInfo.cmake"
   "CMakeFiles/ContinuousStart.dir/DependInfo.cmake"
   "CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake"
+  "docs/CMakeFiles/docs.dir/DependInfo.cmake"
   "test/CMakeFiles/testlib.dir/DependInfo.cmake"
   )
