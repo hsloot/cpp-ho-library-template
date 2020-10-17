@@ -1,3 +1,0 @@
-/home/runner/work/cpp-ho-library-template/build/_deps/catch-subbuild/CMakeFiles/rebuild_cache.dir
-/home/runner/work/cpp-ho-library-template/build/_deps/catch-subbuild/CMakeFiles/edit_cache.dir
-/home/runner/work/cpp-ho-library-template/build/_deps/catch-subbuild/CMakeFiles/catch-populate.dir
