@@ -51,9 +51,8 @@ jobs:
 
     - name: Deploy Documentation
       uses: JamesIves/github-pages-deploy-action@3.7.1
-      working-directory: ${{runner.workspace}}
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}/build
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: docs/html # The folder the action should deploy.
+        FOLDER: working-directory: ${{runner.workspace}}/build/docs/html # The folder the action should deploy.
         CLEAN: true # Automatically remove deleted files from the deploy branch
