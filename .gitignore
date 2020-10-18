@@ -33,3 +33,9 @@
 
 # CMake
 build
+_deps
+CMakeFiles
+CMakeCache.txt
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
+DartConfiguration.tcl

@@ -1,9 +1,11 @@
-cmake_minimum_required(VERSION 3.11...3.18)
+cmake_minimum_required(VERSION 3.14...3.18)
 
 project(examplelib
   VERSION 1.0.0
   DESCRIPTION "An example of a C++ header-only library using CMake, doxygen, and Catch."
   LANGUAGES CXX)
+
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
@@ -15,9 +17,7 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
   find_package(Doxygen)
   if(Doxygen_FOUND)
-    #if (CMAKE_BUILD_TYPE MATCHES "^[Rr]elease")
-      add_subdirectory(docs)
-    #endif()
+    add_subdirectory(docs)
   else()
     message(STATUS "Doxygen not found, not building docs")
   endif()
@@ -29,15 +29,9 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         $<INSTALL_INTERFACE:include>
   )
 
-endif()
+  include(FetchContent)
+  if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR MODERN_CMAKE_BUILD_TESTING) AND BUILD_TESTING)
+    add_subdirectory(test)
+  endif()
 
-
-include(FetchContent)
-if(${CMAKE_VERSION} VERSION_LESS 3.14)
-  include(cmake/add_FetchContent_MakeAvailable.cmake)
-endif()
-
-
-if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR MODERN_CMAKE_BUILD_TESTING) AND BUILD_TESTING)
-  add_subdirectory(test)
 endif()
