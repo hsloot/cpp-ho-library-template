@@ -1,5 +1,3 @@
-name: Deploy documentation
-
 on:
   push:
     branches:
