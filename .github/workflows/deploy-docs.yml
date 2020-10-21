@@ -39,14 +39,14 @@ jobs:
     - name: Configure CMake
       shell: bash
       working-directory: ${{runner.workspace}}/build
-      run: cmake -S $GITHUB_WORKSPACE -B . -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DBUILD_DOCS=ON
+      run: cmake -S $GITHUB_WORKSPACE -B .
 
     - name: Build documentation
       working-directory: ${{runner.workspace}}/build
       shell: bash
       run: |
-        cmake --build . --target Doxygen -DCMAKE_BUILD_TYPE $BUILD_TYPE
-        cmake --build . --target Sphinx -DCMAKE_BUILD_TYPE $BUILD_TYPE
+        cmake --build . --target Doxygen --config $BUILD_TYPE
+        cmake --build . --target Sphinx --config $BUILD_TYPE
         touch docs/sphinx/.nojekyll
 
     - name: Deploy documentation
