@@ -36,7 +36,7 @@ jobs:
     - name: Configure CMake
       shell: bash
       working-directory: ${{runner.workspace}}/build
-      run: cmake -S $GITHUB_WORKSPACE -B . -DBUILD-DOCS=ON
+      run: cmake -S $GITHUB_WORKSPACE -B . -DBUILD_DOCS=ON
 
     - name: Build documentation
       working-directory: ${{runner.workspace}}/build
