@@ -53,6 +53,5 @@ add_custom_command(OUTPUT ${SPHINX_INDEX_FILE}
 # Nice named target so we can run the job easily
 add_custom_target(Sphinx ALL DEPENDS ${SPHINX_INDEX_FILE})
 
-include(GNUInstallDirs)
 install(DIRECTORY ${SPHINX_BUILD}
 	DESTINATION ${CMAKE_INSTALL_DOCDIR})

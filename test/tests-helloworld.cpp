@@ -1,6 +1,6 @@
 #include <catch2/catch.hpp>
 
-#include <examplelib.hpp>
+#include <examplelib/examplelib.hpp>
 
 template <typename _StringType = std::string>
 using hello_world = examplelib::hello_world<_StringType>;
