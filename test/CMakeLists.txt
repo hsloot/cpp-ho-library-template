@@ -13,6 +13,6 @@ add_executable(${CMAKE_PROJECT_NAME}_testlib ${unit_tests})
 target_compile_features(${CMAKE_PROJECT_NAME}_testlib PRIVATE cxx_std_14)
 set_target_properties(${CMAKE_PROJECT_NAME}_testlib PROPERTIES CXX_EXTENSIONS OFF)
 
-target_link_libraries(${CMAKE_PROJECT_NAME}_testlib PRIVATE examplelib Catch2::Catch2)
+target_link_libraries(${CMAKE_PROJECT_NAME}_testlib PRIVATE ${CMAKE_PROJECT_NAME} Catch2::Catch2)
 
-add_test(NAME test_all COMMAND ${CMAKE_PROJECT_NAME}_testlib)
+add_test(NAME test_hello COMMAND ${CMAKE_PROJECT_NAME}_testlib)
